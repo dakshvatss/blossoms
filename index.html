@@ -1,0 +1,352 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blossoms 2024 - Unleash Your Creativity</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+    <style>
+        /* Reset and Base Styles */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            color: #333;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 15px;
+        }
+
+        /* Hero Section */
+        .hero {
+            background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), 
+                        url('https://placekitten.com/1200/600') no-repeat center center;
+            background-size: cover;
+            color: white;
+            text-align: center;
+            padding: 100px 0;
+        }
+
+        .hero h1 {
+            font-size: 3rem;
+            margin-bottom: 20px;
+        }
+
+        .hero p {
+            font-size: 1.5rem;
+            margin-bottom: 30px;
+        }
+
+        .cta-buttons {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+        }
+
+        .btn {
+            display: inline-block;
+            padding: 12px 24px;
+            background-color: #ff6b6b;
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+            transition: background-color 0.3s ease;
+        }
+
+        .btn:hover {
+            background-color: #ff4757;
+        }
+
+        /* Key Highlights */
+        .key-highlights {
+            display: flex;
+            justify-content: space-between;
+            padding: 50px 0;
+            text-align: center;
+        }
+
+        .highlight-item {
+            flex: 1;
+            padding: 0 15px;
+        }
+
+        .highlight-item i {
+            font-size: 3rem;
+            color: #ff6b6b;
+            margin-bottom: 15px;
+        }
+
+        /* About Section */
+        .about {
+            display: flex;
+            align-items: center;
+            padding: 50px 0;
+            background-color: #f4f4f4;
+        }
+
+        .about-text {
+            flex: 1;
+            padding-right: 30px;
+        }
+
+        .about-image {
+            flex: 1;
+        }
+
+        .about-image img {
+            max-width: 100%;
+            border-radius: 10px;
+        }
+
+        /* Featured Events */
+        .featured-events {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 20px;
+            padding: 50px 0;
+        }
+
+        .event-card {
+            border: 1px solid #ddd;
+            border-radius: 10px;
+            padding: 20px;
+            text-align: center;
+            transition: transform 0.3s ease;
+        }
+
+        .event-card:hover {
+            transform: scale(1.05);
+        }
+
+        .event-card i {
+            font-size: 2rem;
+            color: #ff6b6b;
+            margin-bottom: 15px;
+        }
+
+        /* Timeline */
+        .timeline {
+            background-color: #f4f4f4;
+            padding: 50px 0;
+        }
+
+        .timeline-items {
+            display: flex;
+            justify-content: space-between;
+        }
+
+        .timeline-item {
+            text-align: center;
+            position: relative;
+        }
+
+        .timeline-item::before {
+            content: '';
+            position: absolute;
+            top: -20px;
+            left: 50%;
+            width: 2px;
+            height: 50px;
+            background-color: #ff6b6b;
+        }
+
+        /* Testimonials */
+        .testimonials {
+            padding: 50px 0;
+            text-align: center;
+        }
+
+        .testimonial-carousel {
+            display: flex;
+            overflow-x: auto;
+            scroll-snap-type: x mandatory;
+        }
+
+        .testimonial-item {
+            flex: 0 0 100%;
+            scroll-snap-align: start;
+            padding: 0 20px;
+        }
+
+        /* Footer */
+        footer {
+            background-color: #333;
+            color: white;
+            padding: 30px 0;
+            text-align: center;
+        }
+
+        .footer-links {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            margin-bottom: 20px;
+        }
+
+        .footer-links a {
+            color: white;
+            text-decoration: none;
+        }
+
+        .social-links {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            margin-bottom: 20px;
+        }
+
+        .social-links a {
+            color: white;
+            font-size: 1.5rem;
+        }
+    </style>
+</head>
+<body>
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="container">
+            <h1>Welcome to Blossoms 2024!</h1>
+            <p>Unleash Your Creativity, Talent, and Passion!</p>
+            <div class="cta-buttons">
+                <a href="#events" class="btn">Explore Events</a>
+                <a href="#register" class="btn">Register Now</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Key Highlights -->
+    <section class="container key-highlights">
+        <div class="highlight-item">
+            <i class="fas fa-star"></i>
+            <h3>50+ Events</h3>
+            <p>Across Art, Stage, Literary, and Theatre categories.</p>
+        </div>
+        <div class="highlight-item">
+            <i class="fas fa-gift"></i>
+            <h3>Exciting Prizes</h3>
+            <p>Amazing rewards await winners and participants!</p>
+        </div>
+        <div class="highlight-item">
+            <i class="fas fa-microphone"></i>
+            <h3>Expert Judges</h3>
+            <p>Renowned professionals to evaluate your talents!</p>
+        </div>
+    </section>
+
+    <!-- About Blossoms -->
+    <section class="container about">
+        <div class="about-text">
+            <h2>About Blossoms</h2>
+            <p>Blossoms is a vibrant platform celebrating creativity across multiple disciplines. Since its inception, we've been dedicated to nurturing talent, providing a stage for artistic expression, and connecting passionate individuals from diverse backgrounds.</p>
+            <a href="#about" class="btn">Learn More</a>
+        </div>
+        <div class="about-image">
+            <img src="https://placekitten.com/600/400" alt="Blossoms Event Collage">
+        </div>
+    </section>
+
+    <!-- Featured Event Categories -->
+    <section class="container featured-events">
+        <div class="event-card">
+            <i class="fas fa-palette"></i>
+            <h3>Art Events</h3>
+            <p>Discover the beauty of creativity and craftsmanship.</p>
+            <a href="#art-events" class="btn">Explore</a>
+        </div>
+        <div class="event-card">
+            <i class="fas fa-theater-masks"></i>
+            <h3>Stage Events</h3>
+            <p>Feel the rhythm and energy of live performances.</p>
+            <a href="#stage-events" class="btn">Explore</a>
+        </div>
+        <div class="event-card">
+            <i class="fas fa-book"></i>
+            <h3>Literary Events</h3>
+            <p>Express the power of words and ideas.</p>
+            <a href="#literary-events" class="btn">Explore</a>
+        </div>
+        <div class="event-card">
+            <i class="fas fa-film"></i>
+            <h3>Theatre Events</h3>
+            <p>Bring stories to life with dramatic flair.</p>
+            <a href="#theatre-events" class="btn">Explore</a>
+        </div>
+    </section>
+
+    <!-- Event Timeline -->
+    <section class="container timeline">
+        <h2 style="text-align: center; margin-bottom: 30px;">Event Timeline</h2>
+        <div class="timeline-items">
+            <div class="timeline-item">
+                <h3>Event Launch</h3>
+                <p>January 1, 2024</p>
+            </div>
+            <div class="timeline-item">
+                <h3>Registration Deadline</h3>
+                <p>March 10, 2024</p>
+            </div>
+            <div class="timeline-item">
+                <h3>Event Start Date</h3>
+                <p>April 5, 2024</p>
+            </div>
+            <div class="timeline-item">
+                <h3>Finals & Results</h3>
+                <p>April 7, 2024</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials -->
+    <section class="container testimonials">
+        <h2>What People Say</h2>
+        <div class="testimonial-carousel">
+            <div class="testimonial-item">
+                <p>"Blossoms brought out the best in me!" – Past Participant</p>
+            </div>
+            <div class="testimonial-item">
+                <p>"A weekend filled with talent and joy!" – Audience Member</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-links">
+            <a href="#home">Home</a>
+            <a href="#about">About</a>
+            <a href="#events">Events</a>
+            <a href="#results">Results</a>
+            <a href="#register">Register</a>
+            <a href="#contact">Contact Us</a>
+        </div>
+        <div class="social-links">
+            <a href="#"><i class="fab fa-instagram"></i></a>
+            <a href="#"><i class="fab fa-facebook"></i></a>
+            <a href="#"><i class="fab fa-twitter"></i></a>
+        </div>
+        <p>Contact: events@blossoms2024.com | +1 (123) 456-7890</p>
+    </footer>
+
+    <script>
+        // Simple testimonial carousel
+        const testimonialCarousel = document.querySelector('.testimonial-carousel');
+        let currentTestimonial = 0;
+
+        function rotateTestimonials() {
+            currentTestimonial = (currentTestimonial + 1) % testimonialCarousel.children.length;
+            testimonialCarousel.style.transform = `translateX(-${currentTestimonial * 100}%)`;
+        }
+
+        // Rotate testimonials every 5 seconds
+        setInterval(rotateTestimonials, 5000);
+    </script>
+</body>
+</html>
