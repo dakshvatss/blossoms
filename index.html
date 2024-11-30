@@ -17,6 +17,7 @@
             font-family: Arial, sans-serif;
             line-height: 1.6;
             color: #333;
+            background-color: #f4f4f4;
         }
 
         .container {
@@ -27,12 +28,14 @@
 
         /* Hero Section */
         .hero {
-            background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), 
+            background: linear-gradient(rgba(255,105,181,0.5), rgba(147,112,219,0.5)), 
                         url('https://placekitten.com/1200/600') no-repeat center center;
             background-size: cover;
             color: white;
             text-align: center;
             padding: 100px 0;
+            position: relative;
+            overflow: hidden;
         }
 
         .hero h1 {
@@ -54,7 +57,7 @@
         .btn {
             display: inline-block;
             padding: 12px 24px;
-            background-color: #ff6b6b;
+            background-color: #ff69b4;
             color: white;
             text-decoration: none;
             border-radius: 5px;
@@ -63,6 +66,32 @@
 
         .btn:hover {
             background-color: #ff4757;
+        }
+
+        /* Flower Trail Effect */
+        .flower-trail {
+            position: absolute;
+            pointer-events: none;
+            z-index: 1;
+        }
+
+        .flower-trail:before {
+            content: "🌸";
+            font-size: 20px;
+            position: absolute;
+            opacity: 0;
+            animation: flowerTrail 2s linear infinite;
+        }
+
+        @keyframes flowerTrail {
+            0% {
+                transform: translate(0, 0);
+                opacity: 1;
+            }
+            100% {
+                transform: translate(30px, -30px);
+                opacity: 0;
+            }
         }
 
         /* Key Highlights */
@@ -80,7 +109,7 @@
 
         .highlight-item i {
             font-size: 3rem;
-            color: #ff6b6b;
+            color: #ff69b4;
             margin-bottom: 15px;
         }
 
@@ -89,12 +118,16 @@
             display: flex;
             align-items: center;
             padding: 50px 0;
-            background-color: #f4f4f4;
+            background-color: white;
         }
 
         .about-text {
             flex: 1;
             padding-right: 30px;
+        }
+
+        .about-text h2 {
+            color: #9370db;
         }
 
         .about-image {
@@ -120,6 +153,7 @@
             padding: 20px;
             text-align: center;
             transition: transform 0.3s ease;
+            background-color: white;
         }
 
         .event-card:hover {
@@ -128,13 +162,13 @@
 
         .event-card i {
             font-size: 2rem;
-            color: #ff6b6b;
+            color: #ff69b4;
             margin-bottom: 15px;
         }
 
         /* Timeline */
         .timeline {
-            background-color: #f4f4f4;
+            background-color: white;
             padding: 50px 0;
         }
 
@@ -155,7 +189,7 @@
             left: 50%;
             width: 2px;
             height: 50px;
-            background-color: #ff6b6b;
+            background-color: #ff69b4;
         }
 
         /* Testimonials */
@@ -219,6 +253,7 @@
                 <a href="#events" class="btn">Explore Events</a>
                 <a href="#register" class="btn">Register Now</a>
             </div>
+            <div class="flower-trail"></div>
         </div>
     </section>
 
@@ -336,6 +371,22 @@
     </footer>
 
     <script>
+        // Flower trail effect
+        const heroSection = document.querySelector('.hero');
+        const flowerTrail = document.querySelector('.flower-trail');
+
+        heroSection.addEventListener('mousemove', (e) => {
+            const flowerElement = document.createElement('div');
+            flowerElement.classList.add('flower-trail');
+            flowerElement.style.left = `${e.clientX}px`;
+            flowerElement.style.top = `${e.clientY}px`;
+            flowerTrail.appendChild(flowerElement);
+
+            setTimeout(() => {
+                flowerElement.remove();
+            }, 2000);
+        });
+
         // Simple testimonial carousel
         const testimonialCarousel = document.querySelector('.testimonial-carousel');
         let currentTestimonial = 0;
